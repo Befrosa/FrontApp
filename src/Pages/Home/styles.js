@@ -82,6 +82,14 @@ export default StyleSheet.create({
         marginStart: 300,
         position: 'relative',
         marginTop: -75
+    },
+    login:{
+        borderBottomWidth: 1,
+        borderColor: 'white',
+        color: 'white'
+    },
+    picker:{
+        color: 'white'
     }
    
 });

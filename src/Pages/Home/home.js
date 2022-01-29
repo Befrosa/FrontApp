@@ -15,21 +15,28 @@ import {useNavigation} from '@react-navigation/native';
 import {ScrollView} from 'react-native-gesture-handler';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Header from '../../Header/header';
-
+import {Picker} from '@react-native-picker/picker';
 import styles from './styles';
 
 function home() {
   const [visivel, setVisivel] = useState(false);
+  const [skill, setSkill] = useState([
+    'Selecione sua skill',
+    'Pontuabilidade',
+    'Resultados',
+    'Sociavel',
+  ]);
+  const [skillSelecionada, setSkillSelecionada] = useState([]);
 
   return (
     <>
-    <StatusBar
-            barStyle="dark-content"
-            hidden={false}
-            backgroundColor="#253b4c"
-            translucent={false}
-            networkActivityIndicatorVisible={true}
-          />
+      <StatusBar
+        barStyle="dark-content"
+        hidden={false}
+        backgroundColor="#253b4c"
+        translucent={false}
+        networkActivityIndicatorVisible={true}
+      />
       <Header />
       <KeyboardAvoidingView style={styles.container}>
         <TouchableOpacity onPress={() => setVisivel(true)}>
@@ -94,16 +101,15 @@ function home() {
 
         <Modal animationType="fade" transparent={true} visible={visivel}>
           <View style={styles.modal}>
-            <TextInput
-              style={styles.login}
-              type="name"
-              name="name"
-              id="name"
-              placeholder="Inseira o nome da skill"
-              placeholderTextColor="#ffffff"
-              autoCorrect={false}
-              required="required"
-            />
+            <Picker
+              style={styles.picker}
+              selectedValue={skillSelecionada}
+              onValueChange={itemValue => setSkillSelecionada(itemValue)}>
+              {skill.map(sk => {
+                return <Picker.Item label={sk} value={sk} />;
+              })}
+            </Picker>
+
             <TextInput
               style={styles.login}
               type="numeric"
@@ -115,7 +121,7 @@ function home() {
               autoCorrect={false}
               required="required"
             />
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => setVisivel(false)}>
               <Text style={styles.salvar}> Salvar </Text>
             </TouchableOpacity>
             <TouchableOpacity onPress={() => setVisivel(false)}>
@@ -125,7 +131,6 @@ function home() {
         </Modal>
       </KeyboardAvoidingView>
     </>
-
   );
 }
 
