@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   TextInput,
   Image,
+  StatusBar
 } from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 
@@ -26,6 +27,14 @@ function login() {
   const [toggleCheckBox, setToggleCheckBox] = useState(false);
 
   return (
+    <>
+    <StatusBar
+            barStyle="dark-content"
+            hidden={false}
+            backgroundColor="#253b4c"
+            translucent={false}
+            networkActivityIndicatorVisible={true}
+          />
     <KeyboardAvoidingView style={styles.container} behavior="padding">
       <TouchableWithoutFeedback>
         <View>
@@ -95,6 +104,7 @@ function login() {
         </View>
       </TouchableWithoutFeedback>
     </KeyboardAvoidingView>
+    </>
   );
 }
 
