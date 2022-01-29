@@ -31,8 +31,7 @@ function login() {
         <View>
           <Image
             style={styles.neki}
-            source={require('../../../assets/images/logo-branco.png')}
-          />
+            source={require('../../../assets/images/logo-branco.png')}/>
           <View>
             <TextInput
               style={styles.login}

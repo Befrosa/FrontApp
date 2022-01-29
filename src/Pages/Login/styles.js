@@ -2,16 +2,16 @@ import {StyleSheet} from 'react-native';
 
 export default StyleSheet.create({
     container: {
-        backgroundColor: '#45429b',
+        backgroundColor: '#253b4c',
         flex: 1,
         justifyContent: 'center'
     },
     neki:{
-        width: '62.5%',
-        height: "40%",
+        width: 238.4,
+        height: 254.4,
         alignItems: 'center',
-        marginLeft: '23%',
-        marginBottom: "25%",
+        marginLeft: '25%',
+        marginBottom:110,
     },
     login:{
         marginTop: 10,
@@ -20,7 +20,7 @@ export default StyleSheet.create({
         width: '80%',
         color: '#ffffff',
         borderWidth: 2,
-        
+        borderColor: 'white'
     },
 
     user:{
@@ -34,8 +34,7 @@ export default StyleSheet.create({
         top: -40
     },
     lembrar:{
-        margin: 10,
-        textDecorationLine: "none",
+        margin: 10
       
     },
     checkT:{
@@ -50,7 +49,7 @@ export default StyleSheet.create({
     },
     botao:{
         backgroundColor: '#ffffff',
-        color: '#45429b',
+        color: '#253b4c',
         paddingTop: 7,
         fontSize: 15,
         textAlign: 'center', 
@@ -58,12 +57,13 @@ export default StyleSheet.create({
         width: 370,
         height: 35,
         marginLeft: 20,
-        marginTop: '5%',
+        marginTop: 5,
     },
     cadastro: {
         textAlign: 'center',
         color: '#ffffff',
         marginTop: 20,
     },
+   
 
     });

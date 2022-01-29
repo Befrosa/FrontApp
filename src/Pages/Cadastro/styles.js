@@ -2,7 +2,7 @@ import {StyleSheet} from 'react-native';
 
 export default StyleSheet.create({
     container: {
-        backgroundColor: '#45429b',
+        backgroundColor: '#253b4c',
         flex: 1,
         justifyContent: 'center'
     },
@@ -21,6 +21,7 @@ export default StyleSheet.create({
         width: '80%',
         color: '#ffffff',
         borderWidth: 2,
+        borderColor: 'white'
     },
     user:{
         position:'absolute',
@@ -34,7 +35,7 @@ export default StyleSheet.create({
     },
     botao:{
         backgroundColor: '#ffffff',
-        color: '#45429b',
+        color: '#253b4c',
         paddingTop: 7,
         fontSize: 15,
         textAlign: 'center', 
