@@ -68,22 +68,7 @@ function home() {
           />
         </TouchableOpacity>
 
-        <View style={styles.box}>
-          <Image
-            source={require('../../../assets/images/Sociavel.png')}
-            style={styles.imageSkill}
-          />
-          <Text style={styles.text}> Sociavel</Text>
-          <Text style={styles.textL}>10</Text>
-          <TouchableOpacity>
-            <Icon
-              style={styles.delete}
-              name="trash"
-              size={25}
-              color="#ffffff"
-            />
-          </TouchableOpacity>
-        </View> 
+        
 
          <View style={styles.box}>
           <Image
@@ -119,6 +104,23 @@ function home() {
             />
           </TouchableOpacity>
         </View>
+
+        <View style={styles.box}>
+          <Image
+            source={require('../../../assets/images/Sociavel.png')}
+            style={styles.imageSkill}
+          />
+          <Text style={styles.text}> Sociavel</Text>
+          <Text style={styles.textL}>10</Text>
+          <TouchableOpacity>
+            <Icon
+              style={styles.delete}
+              name="trash"
+              size={25}
+              color="#ffffff"
+            />
+          </TouchableOpacity>
+        </View> 
 
         <Modal animationType="fade" transparent={true} visible={visivel}>
           <View style={styles.modal}>

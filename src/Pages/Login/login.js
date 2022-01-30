@@ -17,12 +17,23 @@ import styles from './styles';
 
 function login() {
   const navigation = useNavigation();
+  
   const singIn = () => {
-    navigation.navigate('home');
-  };
+    if( email == "Bernardo@neki.com" && senha == "neki"){
+      navigation.navigate('home');
+    } else {
+      alert("Usuario ou senha incorretos")
+    }
+
+    };
   const cadastro = () => {
     navigation.navigate('cadastro');
   };
+
+  const [email, setEmail] = useState("");
+  const [senha, setSenha] = useState("");
+
+
   const [hidePass, setHidePass] = useState(true);
   const [toggleCheckBox, setToggleCheckBox] = useState(false);
 
@@ -44,7 +55,7 @@ function login() {
           <View>
             <TextInput
               style={styles.login}
-              // onChangeText={setEmail}
+              onChangeText={setEmail}
               keyboardType="email-address"
               autoCapitalize="none"
               name="email"
@@ -52,21 +63,21 @@ function login() {
               placeholder="   Digite seu e-mail"
               placeholderTextColor="#ffffff"
               autoCorrect={false}
-              // value={email}
+              value={email}
             />
             <Icon style={styles.user} name="user" size={25} color="#ffffff" />
           </View>
           <View>
             <TextInput
               style={styles.login}
-              // onChangeText={setSenha}
+              onChangeText={setSenha}
               type="senha"
               name="senha"
               id="senha"
               secureTextEntry={hidePass}
               placeholder="   Digite sua senha"
               placeholderTextColor="#ffffff"
-              // value={senha}
+              value={senha}
               autoCorrect={false}
             />
             <Icon style={styles.user} name="lock" size={25} color="#ffffff" />
