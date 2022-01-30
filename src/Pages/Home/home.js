@@ -17,8 +17,8 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import Header from '../../Header/header';
 import {Picker} from '@react-native-picker/picker';
 import styles from './styles';
-// import skillService from '../../Service/skillService';
-// import userService from '../../Service/userService';
+import skillService from '../../Service/skillService';
+import userService from '../../Service/userService';
 
 function home() {
   const [visivel, setVisivel] = useState(false);
@@ -68,15 +68,30 @@ function home() {
           />
         </TouchableOpacity>
 
-        
+        <View style={styles.box}>
+          <Image
+            source={require('../../../assets/images/Sociavel.png')}
+            style={styles.imageSkill}
+          />
+          <Text style={styles.text}>Sociabilidade</Text>
+          <Text style={styles.textL}>10</Text>
+          <TouchableOpacity>
+            <Icon
+              style={styles.delete}
+              name="trash"
+              size={25}
+              color="#ffffff"
+            />
+          </TouchableOpacity>
+        </View>
 
-         <View style={styles.box}>
+        <View style={styles.box}>
           <Image
             source={require('../../../assets/images/relogio.jpeg')}
             style={styles.imageSkill}
           />
           <Text style={styles.text}>Pontualidade</Text>
-          <Text style={styles.textL}>9</Text>
+          <Text style={styles.textL}>10</Text>
           <TouchableOpacity>
             <Icon
               style={styles.delete}
@@ -92,9 +107,9 @@ function home() {
             source={require('../../../assets/images/resultados.jpg')}
             style={styles.imageSkill}
           />
-          <Text style={styles.text}>  Resultados</Text>
-          <Text style={styles.textL}> 8</Text>
-          
+          <Text style={styles.text}> Resultados</Text>
+          <Text style={styles.textL}> 9</Text>
+         
           <TouchableOpacity>
             <Icon
               style={styles.delete}
@@ -104,23 +119,6 @@ function home() {
             />
           </TouchableOpacity>
         </View>
-
-        <View style={styles.box}>
-          <Image
-            source={require('../../../assets/images/Sociavel.png')}
-            style={styles.imageSkill}
-          />
-          <Text style={styles.text}> Sociavel</Text>
-          <Text style={styles.textL}>10</Text>
-          <TouchableOpacity>
-            <Icon
-              style={styles.delete}
-              name="trash"
-              size={25}
-              color="#ffffff"
-            />
-          </TouchableOpacity>
-        </View> 
 
         <Modal animationType="fade" transparent={true} visible={visivel}>
           <View style={styles.modal}>

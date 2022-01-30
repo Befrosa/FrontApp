@@ -4,6 +4,12 @@ const getSkill = () => {
     return api.get ("/skill")
 }
 
+export const getSkills = () => {
+    const url = '/skill';
+    return api.get(url).then(res => { return res.data } ) 
+    .catch(error=> console.log(error));
+  }
+
 const getSkillId = () => {
     return api.get (`/skill/${id}`)
 }
@@ -27,4 +33,6 @@ export default {
     postSkill,
     deleteSkillId,
     putSkillId,
+    getSkills,
+    
 }
