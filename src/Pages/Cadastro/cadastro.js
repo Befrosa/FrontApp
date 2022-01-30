@@ -45,7 +45,7 @@ function cadastro({navigation}) {
           autoCapitalize="none"
           name="email"
           id="email"
-          placeholder="   Digite seu e-mail"
+          placeholder="   Digite seu login"
           placeholderTextColor="#ffffff"
           autoCorrect={false}
           value={email}

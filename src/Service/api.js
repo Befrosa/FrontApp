@@ -5,4 +5,10 @@ const api = axios.create({
     
 });
 
+export const fazerLogin = () => {
+    const url = '/user';
+    return api.get(url).then(res => {return  res.data} ) 
+    .catch(error=> console.log(error));
+}
+
 export default api;

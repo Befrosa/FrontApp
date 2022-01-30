@@ -13,11 +13,12 @@ import {useNavigation} from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/AntDesign';
 import CheckBox from '@react-native-community/checkbox';
 import styles from './styles';
+import { fazerLogin } from '../../Service/api'; 
 
 function login() {
   const navigation = useNavigation();
-
-  // Função para verificação de login
+ 
+  //Função para verificação de login
   const singIn = () => {
     if (email == 'Bernardo@neki.com' && senha == 'neki') {
       navigation.navigate('home');
@@ -25,6 +26,7 @@ function login() {
       alert('Usuario ou senha incorretos');
     }
   };
+
   // Função para navegação tela cadastro
   const cadastro = () => {
     navigation.navigate('cadastro');
@@ -32,6 +34,7 @@ function login() {
 
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
+  var usuarioExiste = 0;
 
   const [hidePass, setHidePass] = useState(true);
   const [toggleCheckBox, setToggleCheckBox] = useState(false);
@@ -60,7 +63,7 @@ function login() {
                 autoCapitalize="none"
                 name="email"
                 id="email"
-                placeholder="   Digite seu e-mail"
+                placeholder="   Digite seu login"
                 placeholderTextColor="#ffffff"
                 autoCorrect={false}
                 value={email}
