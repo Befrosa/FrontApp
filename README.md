@@ -16,4 +16,6 @@ Projeto criado pelo Bernardo Furtado da Rosa, para empresa Neki para avaliação
 ## Tela Home
 ![home](https://github.com/Befrosa/FrontApp/blob/main/assets/Telas/home.jpeg)
 
+## Tela Modal cadastro
 
+![ModalCadastro](https://github.com/Befrosa/FrontApp/blob/main/assets/Telas/ModalCadastro.jpeg)
